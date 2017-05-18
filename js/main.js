@@ -1,6 +1,7 @@
 var PropCard = function() {
   var topPos = 0;
   var page_state = window.history || null;
+  var inTransit;
 
   return {
     toggleForm: function(e) {
@@ -35,7 +36,8 @@ var PropCard = function() {
       $('.icon.favorite').on('click', function(e){ PropCard.toggleForm(e); });
       $('#favorites_box input:checkbox').on('change', function(e){
         PropCard.addFavorite(e, this);
-        setTimeout( function() { PropCard.toggleForm(e); }, 1000);
+        clearTimeout(inTransit);
+        inTransit = setTimeout( function() { PropCard.toggleForm(e); }, 1000);
       });
     },
     init: function() {
