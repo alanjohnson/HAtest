@@ -151,11 +151,7 @@ footer .icon.favorite {
 }
 footer .icon.favorite.active {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='19' %3E%3Cpath id='favorite' fill='%230E6FD8' d='M11.063,2.359c1.759,-3.047 6.942,-2.914 9.267,-0.9c2.325,2.014 2.153,4.839 -0.086,7.904c-2.026,2.773 -9.301,9.637 -9.301,9.637c0,0 -7.143,-6.965 -9.301,-9.637c-2.169,-2.686 -2.239,-5.89 0.086,-7.904c2.326,-2.014 7.546,-2.13 9.335,0.9Z' /%3E%3Cpath fill='%23FFFFFF' d='M11.028,4.381c1.062,-3.517 6.438,-4.164 8.705,-2.02c1.785,1.689 1.631,3.786 -0.303,6.434c-1.75,2.394 -8.479,8.91 -8.479,8.91c0,0 -6.579,-6.622 -8.442,-8.93c-1.874,-2.32 -2.021,-4.496 -0.167,-6.398c2.06,-2.112 7.691,-1.485 8.686,2.004Z' /%3E%3C/svg%3E") center center no-repeat transparent;
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  animation: heartbeat .5s 0s 1 cubic-bezier(0.42,0,0.58,1) normal;
 }
 footer .icon.favorite:before {
   content: "";
@@ -351,4 +347,35 @@ label:before {
   -moz-transition: all 0.30s;
   -o-transition: all 0.30s;
   transition: all 0.30s;
+}
+
+@keyframes heartbeat {
+  0%  {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  5%  {
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -o-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+  }
+  50%  {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
