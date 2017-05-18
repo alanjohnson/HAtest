@@ -221,12 +221,32 @@ footer .icon.more {
   -webkit-transform: translate(0, 100%);
   transform: translate(0, 100%);
 }
-#favorites_box h3, #favorites_box ul, #favorites_box li, #favorites_box footer {
+#favorites_box h3, #favorites_box ul, #favorites_box li, #favorites_box footer, .friend {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
+}
+
+.friends {
+  float: right;
+  margin-top: -10px;
+}
+.friend {
+  width: 39px;
+  height: 39px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  float: right;
+  margin-left: -5px;
+}
+
+.active .friend {
+  margin-left: -20px;
 }
 #favorites_box footer {
   -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.000, 1);
@@ -248,6 +268,7 @@ footer .icon.more {
 }
 #favorites_box.active li {
   margin: 30px 0;
+  position: relative;
 }
 #favorites_box ul, #favorites_box li {
   list-style: none;
