@@ -8,7 +8,7 @@ var PropCard = function() {
       if ( $('#favorites_box').hasClass('active') ) {
         $('#favorites_box').removeClass('active');
       } else {
-        $('#favorites_box').addClass('active');
+        $('#favorites_box').css('top','0').addClass('active');
       }
     },
     addFavorite: function(e, selected) {
@@ -38,6 +38,9 @@ var PropCard = function() {
         PropCard.addFavorite(e, this);
         clearTimeout(inTransit);
         inTransit = setTimeout( function() { PropCard.toggleForm(e); }, 1000);
+      });
+      $("#favorites_box").on("transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd", function(e){
+        if ( !$(this).hasClass('active') ) { $(this).css('top','100%'); }
       });
     },
     init: function() {

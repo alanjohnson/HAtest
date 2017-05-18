@@ -191,7 +191,7 @@ footer .icon.more {
 #favorites_box {
   background: white;
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -199,19 +199,19 @@ footer .icon.more {
   box-sizing: border-box;
   padding: 116px;
   opacity: 0;
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  -o-transition: all .3s linear;
-  -ms-transition: all .3s linear;
-  transition: all .3s linear;
+  -webkit-transition: opacity .3s linear;
+  -moz-transition: opacity .3s linear;
+  -o-transition: opacity .3s linear;
+  -ms-transition: opacity .3s linear;
+  transition: opacity .3s linear;
   /*background: url('../images/favorites_src.png') 0 0 white;*/
 }
 #favorites_box.active {
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  -o-transition: all .3s linear;
-  -ms-transition: all .3s linear;
-  transition: all .3s linear;
+  -webkit-transition: opacity .3s linear;
+  -moz-transition: opacity .3s linear;
+  -o-transition: opacity .3s linear;
+  -ms-transition: opacity .3s linear;
+  transition: opacity .3s linear;
   opacity: 1;
 }
 
