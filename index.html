@@ -14,11 +14,85 @@
   </head>
   <body>
 
-    <p>test</p>
+    <article class="property_card">
+      <figure class="image">
+        <div class="control prev"></div>
+        <img src="images/rental_photo.jpg" width="613" height="344" alt="dinning room"  />
+        <div class="control next"></div>
+      </figure>
+      <section class='details'>
+        <figure class="customer">
+          <img src="images/customer.jpg" width="69" height="69" alt="customer" />
+        </figure>
+        <div class="property_details">
+          <h3>Fantastically situated apartment</h3>
+          <span class="location">Copenhagen, Frederiksberg</span>
+          <span class="stars_wrap"><span class="stars">2</span></span>
+          <span class="count">(46)</span>
+          <div class="icons">
+            <div class="icon building"></div>
+            <div class="icon sleeps"><span class="count">5</span></div>
+            <div class="icon beds"><span class="count">3</span></div>
+            <div class="icon baths"><span class="count">1</span></div>
+          </div>
+        </div>
+        <div class="price">
+          $177
+          <span class="duration">per night</span>
+        </div>
+      </section>
+      <footer>
+        <div class='icon favorite'>
+          Favorite
+        </div>
+        <div class='icon next'>
+          Next
+        </div>
+        <div class="icon more">
+          more
+        </div>
+      </footer>
+      <section id="favorites_box">
+        <h3>My Favorites</h3>
+        <ul>
+          <li>
+            <input id="short" name="short" type="checkbox" value="true">
+            <label for="short">
+              Shortlist <span class="count">(12)</span>
+            </label>
+          </li>
+          <li>
+            <input id="summer" name="summer" type="checkbox" value="true">
+            <label for="summer">
+              My Summer Vacation <span class="count">(18)</span>
+            </label>
+          </li>
+        </ul>
+        <footer>
+          <a class="new_list" href="#">Create new list</a>
+        </footer>
+      </section>
+    </article>
 
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: {
+        families: ['Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic', 'Roboto+Condensed']
+        }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/vendor/snap.svg-min.js"></script>
     <script src="js/main.js"></script>
 
   </body>
