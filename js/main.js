@@ -48,6 +48,26 @@ var PropCard = function() {
       if ( $('#favorites_box input:checkbox:checked').length ) {
         $('.icon.favorite').addClass('active');
       }
+
+      // SnapSVG
+      var speed = 250;
+  		var easing = mina.easeinout;
+  		[].slice.call ( document.querySelectorAll( '.property_card .control' ) ).forEach( function( el ) {
+  			var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+  				pathConfig = {
+  					from : path.attr( 'd' ),
+            midpoint : el.getAttribute( 'data-path-midpoint' ),
+  					to : el.getAttribute( 'data-path-to' )
+  				};
+  			el.addEventListener( 'click', function() {
+  				path.animate( { 'path' : pathConfig.midpoint }, speed, easing, function(){
+            $(el).addClass('moveit');
+            path.animate( { 'path' : pathConfig.from }, speed, easing, function(){ $(el).removeClass('moveit'); });
+          } );
+  			} );
+  		} );
+     // END SnapSVG
+
     }
   };
 }();
