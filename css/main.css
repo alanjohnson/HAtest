@@ -18,9 +18,17 @@ a {
 }
 .image {
   position: relative;
+  overflow: hidden;
   margin: 0;
   width: 613px;
   height: 344px;
+}
+.image img {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease;
+  -ms-transition: -ms-transform 1s ease;
+  transition: transform 1s ease;
 }
 .control {
   position: absolute;
