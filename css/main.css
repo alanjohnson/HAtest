@@ -33,23 +33,49 @@ a {
 .control {
   position: absolute;
   top: 50%;
-  margin-top: -12px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
   cursor: pointer;
+  z-index: 1;
+}
+.control:hover svg{
+  top: 25%;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  transition: all .25s linear;
+
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .control svg {
-	position: absolute;
-	top: -1px;
-	z-index: 10;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 34%;
+  height: 60%;
+  left: 50%;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  transition: all .25s linear;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform:    translate(-50%, -50%);
+  -ms-transform:     translate(-50%, -50%);
+  -o-transform:      translate(-50%, -50%);
+  transform:         translate(-50%, -50%);
 }
 .control svg path {
 	fill: #fff;
 }
 .control.next {
-  width: 13px;
-  height: 24px;
-  right: 24px;
+  right: 0;
   -webkit-transition: all .25s linear;
   -moz-transition: all .25s linear;
   -o-transition: all .25s linear;
@@ -57,20 +83,21 @@ a {
   transition: all .25s linear;
 }
 .control.next.moveit {
-  right: 30px;
+  right: 10px;
 }
 .control.prev {
-  width: 13px;
-  height: 24px;
-  left: 24px;
+  left: 0;
   -webkit-transition: all .25s linear;
   -moz-transition: all .25s linear;
   -o-transition: all .25s linear;
   -ms-transition: all .25s linear;
   transition: all .25s linear;
 }
+.control.prev:hover  svg{
+  left: 25%
+}
 .control.prev.moveit {
-  left: 30px;
+  left: 10px;
 }
 .details {
   padding: 15px 22px;
