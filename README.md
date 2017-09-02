@@ -1,7 +1,7 @@
 ## HAtest
 
-This is an example of site interaction.  Only the gallery nav and Favorites icon currently function on the main window.
+This is an example of site interaction code (I did NOT do the deisgn on this piece).  The gallery nav is functional, as well as the favorites link - click it to open the "add to favorites" menu.
 
-I'm using css transitions and animation, along with SVG animation on the heart icon.
+I'm using css transitions and animation, along with SVG animation on the heart icon (seen when a favorite is added / removed).
 
 DEMO: https://skittlyoaten.github.io/HAtest/
