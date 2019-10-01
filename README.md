@@ -4,4 +4,4 @@ This is an example of site interaction code (I did NOT do the deisgn on this pie
 
 I'm using css transitions and animation, along with SVG animation on the heart icon (seen when a favorite is added / removed).
 
-DEMO: https://skittlyoaten.github.io/HAtest/
+DEMO: https://alanjohnson.github.io/HAtest/
